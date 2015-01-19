@@ -1,0 +1,512 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta http-equiv="Content-Type" content="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<style>@charset "UTF-8";
+/*
+    This CSS gets added inline
+    into the index.html file
+*/
+body {
+  background: #fff; }
+
+.main {
+  max-width: 976px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 17px 0 18px;
+  zoom: 1; }
+
+html[lang="ar"] body,
+html[lang="fa"] body,
+html[lang="ps"] body,
+html[lang="ur"] body {
+  direction: rtl; }
+
+.main {
+  padding: 1px 0 52px; }
+
+.onbbcdomain .main {
+  padding: 17px 0 18px; }
+
+.masthead {
+  background: #900;
+  color: #fff;
+  display: block;
+  font-size: 11px;
+  height: 17px;
+  line-height: 17px;
+  margin-bottom: 10px;
+  text-transform: uppercase; }
+
+.masthead__logo {
+  background-repeat: no-repeat;
+  height: 100%; }
+
+.onbbcdomain .masthead {
+  display: none; }
+
+.tracking-image {
+  height: 1px;
+  position: absolute;
+  width: 1px; }
+
+.no-js-message {
+  background: red;
+  color: white;
+  display: block;
+  margin-top: -10px;
+  padding: 1em;
+  text-align: center; }
+
+.footer {
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  font-size: 12px;
+  height: 18px;
+  position: fixed;
+  right: 0; }
+
+.footer--logo {
+  background: url(css/f/bbc.png) no-repeat 13px 1px #900;
+  height: 100%; }
+
+.footer::after {
+  bottom: 0;
+  content: "©";
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 13px; }
+
+.onbbcdomain .footer {
+  display: none; }
+
+.tracking-image {
+  height: 1px;
+  position: absolute;
+  width: 1px; }
+
+.no-js-message {
+  background: red;
+  color: white;
+  display: block;
+  margin-top: -10px;
+  padding: 1em;
+  text-align: center; }
+
+.masthead__logo--afrique {
+  background-image: url(css/f/bbc-afrique.png); }
+
+.masthead__logo--arabic {
+  background-image: url(css/f/bbc-arabic.png); }
+
+.masthead__logo--azeri {
+  background-image: url(css/f/bbc-azeri.png); }
+
+.masthead__logo--bengali {
+  background-image: url(css/f/bbc-bengali.png); }
+
+.masthead__logo--burmese {
+  background-image: url(css/f/bbc-burmese.png); }
+
+.masthead__logo--chinese {
+  background-image: url(css/f/bbc-chinese.png); }
+
+.masthead__logo--english {
+  background-image: url(css/f/bbc.png); }
+
+.masthead__logo--gahuza {
+  background-image: url(css/f/bbc-gahuza.png); }
+
+.masthead__logo--hausa {
+  background-image: url(css/f/bbc-hausa.png); }
+
+.masthead__logo--hindi {
+  background-image: url(css/f/bbc-hindi.png); }
+
+.masthead__logo--indonesia {
+  background-image: url(css/f/bbc-indonesia.png); }
+
+.masthead__logo--kyrgyz {
+  background-image: url(css/f/bbc-kyrgyz.png); }
+
+.masthead__logo--mundo {
+  background-image: url(css/f/bbc-mundo.png); }
+
+.masthead__logo--nepali {
+  background-image: url(css/f/bbc-nepali.png); }
+
+.masthead__logo--pashto {
+  background-image: url(css/f/bbc-pashto.png); }
+
+.masthead__logo--persian {
+  background-image: url(css/f/bbc-persian.png); }
+
+.masthead__logo--portuguese {
+  background-image: url(css/f/bbc-portuguese.png); }
+
+.masthead__logo--russian {
+  background-image: url(css/f/bbc-russian.png); }
+
+.masthead__logo--sinhala {
+  background-image: url(css/f/bbc-sinhala.png); }
+
+.masthead__logo--somali {
+  background-image: url(css/f/bbc-somali.png); }
+
+.masthead__logo--swahili {
+  background-image: url(css/f/bbc-swahili.png); }
+
+.masthead__logo--tamil {
+  background-image: url(css/f/bbc-tamil.png); }
+
+.masthead__logo--tajik {
+  background-image: url(css/f/bbc-tajik.png); }
+
+.masthead__logo--turkce {
+  background-image: url(css/f/bbc-turkce.png); }
+
+.masthead__logo--urdu {
+  background-image: url(css/f/bbc-urdu.png); }
+
+.masthead__logo--ukchina {
+  background-image: url(css/f/bbc-ukchina.png); }
+
+.masthead__logo--ukrainian {
+  background-image: url(css/f/bbc-ukrainian.png); }
+
+.masthead__logo--uzbek {
+  background-image: url(css/f/bbc-uzbek.png); }
+
+.masthead__logo--vietnamese {
+  background-image: url(css/f/bbc-vietnamese.png); }
+
+/*# sourceMappingURL=inline.css.map */
+</style>
+
+	<script>
+	(function () {
+
+		function onBbcDomainAccordingTo(urlParam) {
+			var onBbcDomain = false;
+
+			if (urlParam) {
+				var hashtagToIgnore    = urlParam.indexOf('#'),
+					bbcDomainParameter = urlParam.substring(0, hashtagToIgnore !== -1 ? hashtagToIgnore : urlParam.length);
+				
+				onBbcDomain = (bbcDomainParameter === 'true');
+			}
+			
+			return onBbcDomain;
+		}
+
+		var urlParam = window.location.href.split('onbbcdomain=')[1];
+
+		if (onBbcDomainAccordingTo(urlParam)) {
+		    document.documentElement.className += ' onbbcdomain';
+		}
+	})();
+	</script>
+	<!--[if lt IE 9]>
+	    <link type="text/css" rel="stylesheet" href="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/css/legacy-ie.css?v=0.2.28" />
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+	<script>
+	(function () {
+		function oldIE() {
+			return !!(document.documentMode && (document.documentMode < 9));
+		};
+		var styleSheet = oldIE() ? 'legacy-ie':'main';
+		document.write('<link href="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/css/' + styleSheet + '.css?v=0.2.28" rel="stylesheet" type="text/css" media="all" />');
+	})();
+	</script>
+	<noscript>
+	<link href="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/css/main.css?v=0.2.28" rel="stylesheet" type="text/css" media="all" />
+	</noscript>
+	<!--<![endif]-->
+
+</head>
+<body>
+
+    <div class="masthead"><div class="masthead__logo masthead__logo--english"></div></div>
+
+
+    <div class="main">
+        <div class="dogs--list__top_20">
+        <h4>Breeds tagged most frequently by Petlog and Animalcare across whole of the UK in past decade  </h4>
+        <ul>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/labrador_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">1.</span>
+                    <span class="dogs--list__table_name">Labrador Retriever</span>
+                    <span class="dogs--list__table_number">509,500</span>
+                </div>
+            </li>
+
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/jack_russell_terrier_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">2.</span>
+                    <span class="dogs--list__table_name">Jack Russell Terrier</span>
+                    <span class="dogs--list__table_number">376,300</span>
+                </div>
+            </li>
+            
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/staffordshire_bull_terrier_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">3.</span>
+                    <span class="dogs--list__table_name">Staffordshire Bull Terrier</span>
+                    <span class="dogs--list__table_number">356,000</span>
+                </div>
+            </li>
+
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/border_collie_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">4.</span>
+                    <span class="dogs--list__table_name">Border Collie</span>
+                    <span class="dogs--list__table_number">233,700</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/cocker_spaniel_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">5.</span>
+                    <span class="dogs--list__table_name">Cocker Spaniel</span>
+                    <span class="dogs--list__table_number">224,400</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/english_springer_spaniel_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">6.</span>
+                    <span class="dogs--list__table_name">English Springer Spaniel</span>
+                    <span class="dogs--list__table_number">194,700</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/german_shepherd_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">7.</span>
+                    <span class="dogs--list__table_name">German Shepherd</span>
+                    <span class="dogs--list__table_number">158,900</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/yorkshire_terrier_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">8.</span>
+                    <span class="dogs--list__table_name">Yorkshire Terrier</span>
+                    <span class="dogs--list__table_number">144,800</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/shih_tzu_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">9.</span>
+                    <span class="dogs--list__table_name">Shih Tzu</span>
+                    <span class="dogs--list__table_number">117,900</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/cavalier_king_charles_spaniel_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">10.</span>
+                    <span class="dogs--list__table_name">Cavalier King Charles</span>
+                    <span class="dogs--list__table_number">116,400</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/west_highland_white_terrier_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">11.</span>
+                    <span class="dogs--list__table_name"> West Highland White</span>
+                    <span class="dogs--list__table_number">112,000</span>
+                </div>
+            </li>
+            
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/golden_retriever_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">12.</span>
+                    <span class="dogs--list__table_name">Golden Retriever</span>
+                    <span class="dogs--list__table_number">91,400</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/boxer_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">13.</span>
+                    <span class="dogs--list__table_name">Boxer</span>
+                    <span class="dogs--list__table_number">84,600</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/border_terrier_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">14.</span>
+                    <span class="dogs--list__table_name"> Border Terrier</span>
+                    <span class="dogs--list__table_number">84,000</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/rottweiler_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">15.</span>
+                    <span class="dogs--list__table_name"> Rottweiler</span>
+                    <span class="dogs--list__table_number">75,400</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/chihuahua_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">16.</span>
+                    <span class="dogs--list__table_name">Chihuahua</span>
+                    <span class="dogs--list__table_number">74,200</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/lhasa_apso_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">17.</span>
+                    <span class="dogs--list__table_name">Lhasa Apso</span>
+                    <span class="dogs--list__table_number">61,700</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/bichon_frise_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">18.</span>
+                    <span class="dogs--list__table_name">Bichon Frise</span>
+                    <span class="dogs--list__table_number">57,700</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/lurcher_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">19.</span>
+                    <span class="dogs--list__table_name">Lurcher</span>
+                    <span class="dogs--list__table_number">56,800</span>
+                </div>
+            </li>
+            <li class="dogs--list__top_20_item">
+                <div class="dogs--list__image__container">
+                    <img src="http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/img/responsive/110x110/greyhound_110x110.png" />
+                </div>
+                <div class="dogs--list__top20__text__container">
+                    <span class="dogs--list__table_rank">20.</span>
+                    <span class="dogs--list__table_name">Greyhound</span>
+                    <span class="dogs--list__table_number">49,400</span>
+                </div>
+            </li>
+        </ul>
+    </div> 
+    </div>
+
+
+    <div class="footer"><div class="footer--logo"></div></div>
+    <script>
+        var browserType = null;
+
+        if ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
+            browserType = 'html5';
+        }
+        else if (document.documentMode && (document.documentMode < 9)) {
+            browserType = 'legacyie';
+        }
+
+        if (browserType) {
+            var debugMode = setDebugMode(),
+                settings  = getSettings(browserType, debugMode),
+                done      = false,
+                script    = document.createElement('script');
+            script.src = "http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/js/lib/vendors/require/require-2.1.0.js";
+            script.type = "text/javascript";
+            script.onload = script.onreadystatechange = function() {
+                if ( !done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") ) {
+                    done = true;
+                    require.config(settings.requireConfig);
+                    require([settings.moduleToStartApp], function () {
+                        require(['app'], function (app) {});
+                    });
+                }
+            }
+            document.body.appendChild(script);
+        }
+
+        function setDebugMode() {
+            var debugForced = window.location.href.match(/debug=true/);
+            if (debugForced) {
+                return true;
+            }
+            return false;
+        }
+
+        function getSettings(browserType, debug) {
+            var config = {
+                    urlArgs: "v=0.2.28",
+                    baseUrl: "http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/js/"
+                },
+                moduleToStartApp = 'http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/js/all-'+browserType+'.js';
+
+            if (debug) {
+                var jqueryVersion   = (browserType === 'html5') ? 'jquery-2.0.3' : 'jquery-1.9.1';
+                config.paths        = {"pubsub":"./lib/vendors/jquery/pubsub","text":"./lib/vendors/require/text"};
+                config.paths.jquery = './lib/vendors/jquery/' + jqueryVersion;
+                config.paths.app    = './app';
+                moduleToStartApp    = 'http://static.local.bbc.co.uk:1033/news/special/2015/newsspec_7937/content/english/js/app.js';
+            }
+            return {
+                requireConfig: config,
+                moduleToStartApp: moduleToStartApp
+            };
+        }
+    </script>
+
+</body>
+</html>

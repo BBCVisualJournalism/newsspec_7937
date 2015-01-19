@@ -1,0 +1,16 @@
+/* separate your sass into different files to keep it maintainable!  */
+.main {
+    max-width: 624px;
+    margin-left: 0;
+
+	img{
+		width: 100%;
+	}
+
+	.hidden {
+	    display: none;
+	}
+}
+@import "dogs_map";
+@import "dogs_list";
+@import "dogs_rollover";
