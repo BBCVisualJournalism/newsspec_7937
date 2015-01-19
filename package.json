@@ -5,7 +5,7 @@
     "url": "http://github.com/BBCVisualJournalism/newsspec_7937"
   },
   "description":    "the popularity of dogs by postcode, with two includes one is a map showing breed popularity by postcode two is a list of most popular breeds",
-  "version":        "0.2.28",
+  "version":        "0.2.29",
   "devDependencies": {
     "grunt":                            "~0.4.0",
     "grunt-bump":                       "~0.0.15",
